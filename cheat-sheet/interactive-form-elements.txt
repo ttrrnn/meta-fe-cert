@@ -1,0 +1,30 @@
+Cheat Sheet: Interactive Form Elements
+
+Required
+Denotes a mandatory input that the user cannot leave empty. Can be used with any input type.
+
+<input type="text" id="firstName" name="firstName" required>
+<input type="password" id="password" name="password" required>
+<input type="radio" required>
+
+MaxLength
+Specifies the maximum length of a text input and prevents user from entering more characters than the limit
+<input type="text" id="description" name="description" maxlength="50">
+
+MinLength
+Specifies the minimum length of a text input and will not accept fewer characters than specified.
+
+<input type="password" id="password" name="password" minlength="8" required>
+
+Min and Max Attributes
+Determines the min and max values allowed for an input field. Usually applied to numerical text inputs, range inputs, or dates.
+
+<input type="number" id="quantity" name="quantity" min="1" max="10">
+
+<input type="range" id="volume" name="volume" min="1" max="100">
+
+Pattern
+Defines a particular pattern that an input field value has to fulfill to be considered valid. Attribute expects a regular expression to specify the pattern. Works with text, date, search, URL, tel, email, and password input types.
+
+Example: restrict phone numbers to be only from the UK
+<input type="tel" id="phone" name="phone" pattern=”^(?:0|\+?44)(?:\d\s?){9,10}$” >
