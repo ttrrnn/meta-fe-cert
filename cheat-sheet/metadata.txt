@@ -1,0 +1,63 @@
+Cheat Sheet: HTML <meta> tags
+
+Name
+Name of property can be anything you like, but browsers expect a value they understand and can take action upon.
+
+<meta name="author" content="name">         // this states the author of the page
+
+Content
+Content field specifies the property’s value.
+
+<meta name="language" content="english">    // specifies language of webpage to search engines
+
+Charset
+Special field that lets you specify the character encoding used for the page so that the browser can display properly.
+Most frequently used is utf-8.
+
+<meta charset="UTF-8">
+
+HTTP-equiv
+Stands for HTTP equivalent and is used to stimulate HTTP response headers. Rare to see and is recommended to use HTTP headers over HTML http-equip meta tags.
+
+Example: instruct browser to refresh the page every 30mins
+<meta http-equiv="refresh" content="30">
+
+
+Basic <meta> tags for SEO
+<meta name="description" />                     // brief description of webpage
+
+<meta name="title" />                           // title of webpage
+
+<meta name="author" content="name"/>            // author of webpage
+
+<meta name="language" content="english" />      // language of webpage
+
+<meta name="robots" content="index,follow" />   // tells search engine how to crawl or index
+
+<meta name="google" />                          // tells Google not to show the sitelinks search box for your page when showing search results
+
+<meta name="googlebot" content="notranslate" /> // tells Google you don't want to provde automatic translations
+
+<meta name="revised" content="Sunday, July 18th, 2010 5:15 pm" /> // specifies last modified date time
+
+<meta name="rating" content="safe for kids" />                    // specifies audience for page
+
+<meta name="copyright" content="Copyright 2022" />
+
+<meta https-equiv=“…” /> tags
+<meta https-equiv="content-type" content="text/html" />     // specifies format of document returned by server
+
+<meta https-equiv="default-style" />                        // specifies format of styling document
+
+<meta https-equiv="refresh" />                              // specifies duration of page before it's considered stale
+
+<meta https-equiv="Content-language" />                     // specifies language of page
+
+<meta https-equiv="Cache-Control" content="no-cache" />     // instructs browser how to cache your page
+
+Responsive Design/Mobile <meta> tags
+<meta name="format-detection" content="telephone=yes" />    // telephone numbers should appear as hypertext link that can be clicked to make a phone call
+
+<meta name="HandheldFriendly" content="true" />.            // page can be properly visualized on mobile devices
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />  //specifies are of the window in which web content can be seen
