@@ -53,7 +53,6 @@ form > div {
     font-size: 0.75em;
 }
 
-input:focus:invalid {
+input:invalid {
     color: red;
-    border: red 3px solid;
 }
