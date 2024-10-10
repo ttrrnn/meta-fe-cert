@@ -1,0 +1,70 @@
+Cheat Sheet: iFrame Sandbox
+
+<iframe> is the inline frame element that embeds an HTML page into another page
+
+Element-specific Attributes
+
+allow
+Specifies what features or permissions are available to the frame e.g. mic access, camera, APIs, etc
+* allow=“fullscreen” — the fullscreen mode can be activated
+* allow=“geolocation” — lets you access user’s location
+
+To specific more than one feature, use semi-colon
+
+<iframe src="https://example.com" allow="camera; microphone"> </iframe>
+
+name
+Name for iframe
+
+<iframe name = "My Frame" width="400" height="300"></iframe>
+
+height / width
+Specifics height / width of the iframe. 
+Height defaults to 150px
+Width defaults to 300px
+
+referrerpolicy
+Referrer is the HTTP header that lets the page know who is loading it. This attribute indicates which referrer information to send when loading the frame resource. Common values are:
+* no-referrer — referrer header will not be sent
+* origin — referrer will be limited to the origin of the referring page
+* strict-origin — origin of the document is sent as the referrer only when using the same protocol security level (HTTPS to HTTPS) 
+
+sandbox
+To enforce greater security, a sandbox applies extra restrictions to the content in the <iframe>.
+To life particular restrictions, an attribute value (permission token) is used.
+Common permission tokens:
+* allow-downloads — allows user to download an item
+* allow-forms — allow users to submit forms
+* allow-modals — resource can open modal windows
+* allow-orientation-lock — lets the resource lock the screen orientation
+* allow-popups — allows popups to open
+* allow-presentation — allows a presentation session to start
+* allow-scripts — lets the resource run scripts without creating popup windows
+
+Value of attribute is empty, all restrictions applied.
+To apply 1+ permission, use space-separated list
+
+<iframe src="my_iframe_sandbox.html" sandbox="allow forms allow-scripts"> </iframe>
+
+src
+URL of the page to embed in the <iframe>.Use about:blank would embed an empty page
+
+srcdoc
+Lets you specify the inline HTML to embed in the <iframe>. 
+When defined, attribute would override src
+
+The following would display “My inline html” in the frame instead of loading my_iframe_src.html
+
+<iframe src="my_iframe_src.html" srcdoc="<p>My inline html</p>"></iframe>
+
+loading
+Lets your specify if the iframe should be loaded immediately when the web page loads (eager) or loaded when iframe is displayed in the browser (lazy).
+Allows you to defer loading iframe content if it is further down your page and outside of the display area when page is initially loaded.
+
+<iframe src="my_iframe_src.html" loading="lazy"></iframe>
+
+title
+Lets you add a description to the iframe for accessibility purposes.
+Value should accurately describe the iframe’s content
+
+<iframe src="history.html" title="An embedded document about the history of my family"></iframe>
